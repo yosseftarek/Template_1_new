@@ -1,0 +1,48 @@
+/*About section*/
+.about-content {
+    overflow: hidden;
+}
+
+.about-item {
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+}
+
+.about-item:hover .about-item-title {
+    /*hat elabout item lma a3ml hover 3lek  hat el about title(ele hyt2asar eltitle)*/
+    color: #fff;
+}
+
+.about-item.mg {
+    /*3onsor wa7d wa5d elclassat dh*/
+    margin: 0 5%;
+    /*5% mn elyemen w 5% mn el4mal yb2a 100%*/
+}
+
+.about-item .icon {
+    color: var(--mainColor);
+    margin-bottom: 10px;
+}
+
+.about-item-title {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    transition: color 0.5s;
+    /*ele byt2sr eltitle */
+
+}
+
+.about-item-desc {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: var(--grayColor);
+}
+
+.about-item-link {
+    color: var(--mainColor);
+    text-transform: capitalize;
+}

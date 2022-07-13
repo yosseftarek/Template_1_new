@@ -1,0 +1,121 @@
+/*Portofolio section*/
+.portofolio-content {
+    overflow: hidden;
+    /*7al mo4kelet elfloat*/
+}
+
+.portofolio-item {
+    width: 32%;
+    float: left;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 20px;
+}
+
+.portofolio-item .layer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+
+.portofolio-item:hover .layer-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.layer-content .layer-info {
+    position: absolute;
+    /*hero image*/
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    /*mkabaro 34an elkalam yege kolo f satr*/
+    transform: translate(-50%, -50%);
+    /**/
+    text-align: center;
+}
+
+.layer-content .category {
+    color: var(--mainColor);
+    text-transform: uppercase;
+    display: block;
+    /*34an margin y4t8al*/
+    margin-bottom: 5px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+
+    transition-delay: 0.2;
+    /*entezar*/
+}
+
+.layer-content-title {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    /*34an ytla3o fo2 lma a2of 3lehom lma adehom fe el hover top 0*/
+    top: 10px;
+    /*34an ytla3o fo2 lma a2of 3lehom lma adehom fe el hover top 0*/
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3;
+    opacity: 0;
+
+}
+
+/*.layer-content a{
+    display: inline-block;34an el2 icons yego ganb b3d kda bl width w height wastano elicons
+     width: 40px;
+     height: 40px;
+     background-color: #6195ff;
+     mmkn asta8na 3n kol dh w a7ot ko ele etktb hna copy paste fe .layer-content a i
+}*/
+.layer-content a {
+    position: relative;
+    /*34an ytla3o fo2 lma a2of 3lehom lma adehom fe el hover top 0*/
+    top: 10px;
+    /*34an ytla3o fo2 lma a2of 3lehom lma adehom fe el hover top 0*/
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3;
+    opacity: 0;
+
+}
+
+.layer-content a i {
+    line-height: 40px;
+    /*nafs 7agm elheight*/
+    /*34an awastano verticaly nafs qemet elwidth w elheight */
+    width: 40px;
+    height: 40px;
+    background-color: var(--mainColor);
+    display: inline-block;
+    color: #fff;
+    /*loon elicon*/
+}
+
+.portofolio-item:hover .layer-content-title,
+.portofolio-item:hover .layer-content a,
+.portofolio-item:hover .layer-content .category {
+    /*lma a2of 3la elkalam ytl3 foo2 4waya*/
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.portofolio-item.mg {
+    /*el3onsor ele wa5d dh wdh*/
+    margin: 0 2%;
+
+}
+
+.portofolio-item img {
+    width: 100%;
+    /*100% mn elparent bta3ha ele wa5d 30%*/
+}

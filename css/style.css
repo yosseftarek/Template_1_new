@@ -1,0 +1,925 @@
+/*
+ 1-common styles
+ 2-General styles
+ 3-sections
+    3.0-Header section
+    3.1-Home section
+    3.2-About section
+    3.3-Portofolio section
+    3.4-service section
+    3.5-Prices section
+    3.6-Team section
+    3.7-Blog section
+    3.8-Contact section
+    3.9-Footer section
+*/
+
+
+/*1-common*/
+/*
+      - overlay
+      - opacity hover
+      - section header(welcome to  website )
+      - section padding
+      - hover effect 1(left to right)
+      - hover effect 2(yop to bottom)
+      - elmawke3 kolo gowa container
+    */
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.hover-opacity {
+    transition: 0.5s;
+    /*opacity tt3ml f wa2t b3mlha llparent*/
+
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+.ltr-effect,
+.tb-effect {
+    position: relative;
+}
+
+.ltr-effect:after,
+.tb-effect:after {
+    position: absolute;
+    content: "";
+    /*height: 100%; m3nah 100%mn msa7t el ab*/
+    top: 0;
+    left: 0;
+    /*top0 bott 0 ka2eno ma4dod by3ml 3amal height 100%*/
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    z-index: -1;
+    /*yb2a wara elkalam*/
+}
+
+.ltr-effect:after {
+    /*el7aga elmo5talefa 3n tp.effect:after=>width , transition width*/
+    /*lma a3ml hover hat elafter*/
+    width: 0;
+    transition: width 0.5s;
+    /*5ale elwidth yt7rk bra7a f nos sanya*/
+}
+
+.tb-effect:after {
+    /*el7aga elmo5talefa 3n ltr.effect:after=>height , transition height*/
+    height: 0;
+    transition: height 0.5s;
+}
+
+.ltr-effect:hover:after {
+    /*lma a3ml hover hat elafter*/
+    width: 100%;
+}
+
+.tb-effect:hover:after {
+    /*lma a3ml hover hat elafter*/
+    height: 100%;
+}
+
+/*2-General css style(el7agat ele mo4taraka)*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{/*=html*/
+    --mainColor:#6195ff;
+    --grayColor:#999;
+    --whiteColor:#fff;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.clear {
+    clear: both;
+    /*mo4kelet float el7al elawel*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: montserrat, sans-serif;
+    /*lw ma4ta8l4 a3ml include mn maktabet google font*/
+}
+
+button {
+    font-family: 'Varela Round', sans-serif;
+    /*aw ne3mlha font-family:inhirit y3ni fontfamily bta3t elmwke3*/
+}
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.pd-y {
+    padding: 120px 0px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header .section-title {
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+.section-header .line {
+    /*line 3obara 3n height w width*/
+    display: block;
+    height: 5px;
+    width: 60px;
+    margin: 0 auto 70px auto;
+    /*awastan ay 3onsor wa5d width*/
+    background-color: var(--mainColor);/*bygebo mn elroot*/
+}
+
+/*3-sections styles*/
+/*3.0-Header section*/
+.header {
+    position: fixed;
+    /*hyb2a nav ta7t content (background image)*/
+    width: 100%;
+    /*34an ya5od kol el4a4a bltol 34an howa b2a inline-block*/
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+    /*nav foo2 image*/
+}
+
+/*.header-content {
+    overflow: hidden;
+    mo4kelet float el7al eltani
+    msta5demnaha4 34an hya fe elheader w mtenf34 m3 dropdown msh htzhar
+    
+    b3d ma 3mlna position relative w position absolute msh zahra bardo 34an hidden 34an kda 4elnaha 
+}*/
+
+.header .logo {
+    /*elmakan ele wa5d elsora*/
+    width: 40%;
+    /*background: red; k aterbha 34an abyaenha lnafse fe elawel*/
+    float: left;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 15px;
+}
+
+.header .nav {
+    width: 60%;
+    /*background: green; k aterbha 34an abyaenha lnafse fe elawel*/
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav>li {
+    /*hat li welad elnav bs*/
+    display: inline-block;
+    text-align: right;
+    /*padding: 20px;kda ana bawasa3 msa7et el list msh el a msh htb2a clickable*/
+}
+
+.header .nav>li>a {
+    /*hat el a ele howa ebn li ebn nav
+    34an msh 3ayz l blog post tban el4arta elzar2a ele ta7taha dh
+    el a bta3t blog post dh ebn el ul*/
+    color: white;
+    display: block;
+    padding: 30px 15px;
+    font-size: 15px;
+}
+
+.header .nav>li>a.active:after,
+/*after before 3anaser inline*/
+.header .nav>li>a:after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: var(--mainColor);
+    transition: width 0.5s;
+}
+
+.header .nav>li>a.active:after {
+    /*awel a htb2a wad7a*/
+    width: 100%;
+}
+
+.header .nav>li>a:after {
+    /*ay a tanya htb2a 0*/
+    width: 0;
+}
+
+.header .nav>li>a:hover:after {
+    width: 100%;
+}
+
+.header .nav>li>a:hover:after {
+    /*lma a3ml hover 3la a htale elafter*/
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: var(--mainColor);
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visiblity 0.5s;
+    /*aw aktb opacity bs */
+}
+
+.dropdown-menu a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    /*lma a4awer eldropdown hat dropdown menu*/
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Home section*/
+.home {
+    height: 100vh;
+    background-image: url(../images/background/background1.webp);
+    background-size: cover;
+    position: relative;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 65%;
+    /*34an elakalam yb2a wa5d ra7to*/
+}
+
+.home .title {
+    color: #fff;
+    font-size: 3.5rem;
+    /*rem=>root element/font size of html(16)*/
+    text-transform: uppercase;
+}
+
+.home .home-desc {
+    margin: 20px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.home .btn {
+    min-width: 160px;
+    padding: 10px;
+    /*lltext ele gowa msh elcontainer*/
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    /*lma a4awer blmouse ela elpointer 4aklo yt8ayar*/
+    font-size: 18px;
+}
+
+.home .btn-start {
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.home .btn-learn {
+    background-color: var(--mainColor);
+    color: #fff;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+/*About section*/
+.about-content {
+    overflow: hidden;
+}
+
+.about-item {
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+}
+
+.about-item:hover .about-item-title {
+    /*hat elabout item lma a3ml hover 3lek  hat el about title(ele hyt2asar eltitle)*/
+    color: #fff;
+}
+
+.about-item.mg {
+    /*3onsor wa7d wa5d elclassat dh*/
+    margin: 0 5%;
+    /*5% mn elyemen w 5% mn el4mal yb2a 100%*/
+}
+
+.about-item .icon {
+    color: var(--mainColor);
+    margin-bottom: 10px;
+}
+
+.about-item-title {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    transition: color 0.5s;
+    /*ele byt2sr eltitle */
+
+}
+
+.about-item-desc {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: var(--grayColor);
+}
+
+.about-item-link {
+    color: var(--mainColor);
+    text-transform: capitalize;
+}
+
+/*Portofolio section*/
+
+
+.portofolio-content {
+    overflow: hidden;
+    /*7al mo4kelet elfloat*/
+}
+
+.portofolio-item {
+    width: 32%;
+    float: left;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 20px;
+}
+
+.portofolio-item .layer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+
+.portofolio-item:hover .layer-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.layer-content .layer-info {
+    position: absolute;
+    /*hero image*/
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    /*mkabaro 34an elkalam yege kolo f satr*/
+    transform: translate(-50%, -50%);
+    /**/
+    text-align: center;
+}
+
+.layer-content .category {
+    color: var(--mainColor);
+    text-transform: uppercase;
+    display: block;
+    /*34an margin y4t8al*/
+    margin-bottom: 5px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+
+    transition-delay: 0.2;
+    /*entezar*/
+}
+
+.layer-content-title {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    /*34an ytla3o fo2 lma a2of 3lehom lma adehom fe el hover top 0*/
+    top: 10px;
+    /*34an ytla3o fo2 lma a2of 3lehom lma adehom fe el hover top 0*/
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3;
+    opacity: 0;
+
+}
+
+/*.layer-content a{
+    display: inline-block;34an el2 icons yego ganb b3d kda bl width w height wastano elicons
+     width: 40px;
+     height: 40px;
+     background-color: #6195ff;
+     mmkn asta8na 3n kol dh w a7ot ko ele etktb hna copy paste fe .layer-content a i
+}*/
+.layer-content a {
+    position: relative;
+    /*34an ytla3o fo2 lma a2of 3lehom lma adehom fe el hover top 0*/
+    top: 10px;
+    /*34an ytla3o fo2 lma a2of 3lehom lma adehom fe el hover top 0*/
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3;
+    opacity: 0;
+
+}
+
+.layer-content a i {
+    line-height: 40px;
+    /*nafs 7agm elheight*/
+    /*34an awastano verticaly nafs qemet elwidth w elheight */
+    width: 40px;
+    height: 40px;
+    background-color: var(--mainColor);
+    display: inline-block;
+    color: #fff;
+    /*loon elicon*/
+}
+
+.portofolio-item:hover .layer-content-title,
+.portofolio-item:hover .layer-content a,
+.portofolio-item:hover .layer-content .category {
+    /*lma a2of 3la elkalam ytl3 foo2 4waya*/
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.portofolio-item.mg {
+    /*el3onsor ele wa5d dh wdh*/
+    margin: 0 2%;
+
+}
+
+.portofolio-item img {
+    width: 100%;
+    /*100% mn elparent bta3ha ele wa5d 30%*/
+}
+
+
+/*service section*/
+.service-item {
+    width: 50%;
+    float: left;
+}
+
+.service-item .section-header {
+    text-align: left;
+}
+
+.service-item .section-header .line {
+    margin: 0 0 40px 0;
+}
+
+.service-item-desc {
+    padding-right: 20px;
+    color: var(--grayColor);
+    line-height: 1.5;
+    font-size: 17px;
+    margin-bottom: 20px;
+
+}
+
+.service-list {
+    list-style: none;
+}
+
+.service-list li {
+    margin-bottom: 10px;
+    color: var(--grayColor);
+}
+
+.service-list li i {
+    border: 1px solid var(--mainColor);
+    color: var(--mainColor);
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.service-item-img img {
+    width: 100%;
+    /*width 100% mn parent bta3ha*/
+}
+
+.service-bollets {
+    list-style: none;
+    text-align: center;
+}
+
+.service-bollets li {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #e8e8e8;
+    border-radius: 50%;
+    margin: 10px 5px;
+}
+
+.service-bollets li.active {
+    background-color: var(--mainColor);
+}
+
+.service-bollets li:hover {
+    background-color: var(--mainColor);
+}
+
+/*section numbers*/
+.numbers {
+    /*leh width bs malo4 height 34an ebno wa5d absolute(o5rog barra elsaf7a) fhowa yo3tabar msh mn demn elab bta3o flazm ade height*/
+    position: relative;
+    background-image: url(../images/background/background2.webp);
+    background-size: cover;
+    /*34an temla el7ayez ele mawgoda feh*/
+    background-attachment: fixed;
+    /*34an elsora tb2a sabta wana b3ml scroll 34an tt7rk kda wana b3ml scroll*/
+    height: 300px;
+}
+
+.numbers-items {
+    overflow: hidden;
+    padding: 100px 0;
+    /*34an yege felnos vertically*/
+}
+
+.number-item {
+    width: 25%;
+    /*34an homma 4 ganb b3d*/
+    float: left;
+    text-align: center;
+}
+
+.number-item .icon {
+    color: var(--mainColor);
+    margin-bottom: 15px;
+}
+
+.number-item-title {
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}
+
+.number-item-desc {
+    color: #fff;
+}
+
+/*Prices section*/
+.pricing {}
+
+.pricing-plans {
+    overflow: hidden;
+}
+
+.pricing-item {
+    width: 30%;
+    float: left;
+    padding: 40px 15px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+.pricing-item.mg {
+    margin: 0 5%;
+}
+
+.pricing-item-text {
+    text-transform: uppercase;
+    font-size: 17px;
+    color: var(--grayColor);
+    transition: color 0.5s;
+}
+
+.pricing-item-permonth {
+    width: 130px;
+    height: 130px;
+    /*34an elkora tb2a malfofa 7elw*/
+    padding: 20px 0;
+    margin: 20px auto;
+    border: 2px solid var(--mainColor);
+    border-radius: 50%;
+    transition: color 0.5s;
+}
+
+.pricing-item-permonth .doller {
+    font-size: 50px;
+}
+
+.pricing-item-permonth .month {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.pricing-list {
+    list-style: none;
+}
+
+.pricing-list li {
+    color: var(--grayColor);
+    line-height: 1.8;
+}
+
+.pricing-item-purchase {
+    background: none;
+    border: 2px solid var(--mainColor);
+    display: block;
+    width: 140px;
+    padding: 10px;
+    margin: 15px auto 0 auto;
+    color: var(--mainColor);
+
+}
+
+.pricing-item:hover .pricing-item-permonth {
+    color: #fff;
+}
+
+.pricing-item:hover .pricing-item-text {
+    color: var(--mainColor);
+}
+
+/*testimonail section*/
+.testimonail {
+    position: relative;
+    background-image: url(../images/background/background3.webp);
+    /*background-size: cover;*/
+    background-attachment: fixed;
+    height: 400px;
+}
+
+.testimonail-content {
+    overflow: hidden;
+    padding: 120px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.testimonail-item {
+    width: 50%;
+    /*lazm m3 elfloat 34an tege fe elnos*/
+    float: left;
+    color: #fff;
+}
+
+.testimonail-item .testimonail-toplayer {
+    padding: 10px 2px 40px 100px;
+    /*left keber 34an a7ot feh elsora*/
+    position: relative;
+
+}
+
+.testimonail-item .testimonail-toplayer img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+}
+
+.testimonail-item .testimonail-toplayer .testimonail-name {
+    margin: 5px 0;
+}
+
+.testimonail-item .testimonail-toplayer .testimonail-job {
+    color: var(--mainColor);
+}
+
+.testimonail-desc {
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+/*Team section*/
+.team {}
+
+.team-content {
+    overflow: hidden;
+}
+
+.team-item {
+    width: 30%;
+    float: left;
+    background-color: #e8e8e8;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.team-item.mg {
+    margin: 0 5%;
+}
+
+.team-item .team-img {
+    width: 90%;
+    /*width bta3 div ele ayl elsora  elsora kebera f asa8ar elwidth bta3o*/
+    margin: auto;
+    /*34an yokon fe nos elparent bta3o*/
+    position: relative;
+    /*34an ageeb elicons foo2elsora*/
+}
+
+
+.team-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /*ka2ene ba2ol width 100% height100%*/
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    /*a2dar ados 3lehom f lazm visbility hidden*/
+    visibility: hidden;
+}
+
+.team-item .team-img img {
+    width: 100%;
+}
+
+.team-overlay a {
+    display: block;
+    /*yokono t7t b3d*/
+    width: 40px;
+    height: 40px;
+    background-color: var(--mainColor);
+    color: #fff;
+    margin-left: auto;
+    /*(yozo2 nafso mn el4mal w yewadeh yemen)*/
+}
+
+.team-overlay a i {
+    line-height: 40px;
+    /*34an awastanha (nafs 7agz elgheight bta3 elparent bta3h af tokon fe lnos*/
+}
+
+.team-item .team-img img {
+    width: 100%;
+    /*100% mn elparent ele wa5d 90% (34an elsora tenla 7ayez elparent)*/
+    margin: auto;
+    /*34an yokon fe nos elparent bta3o*/
+
+}
+
+.team-item .team-info-title {
+    color: #222;
+    margin: 10px 0;
+    transition: color 0.5s;
+
+}
+
+.team-item .team-info-text {
+    color: var(--grayColor);
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.5s;
+
+}
+
+.team-item:hover .team-overlay {
+    /*lma a3ml 3lek hover hatle team-overlay w 5ale eltale */
+    visibility: visible;
+    opacity: 1;
+}
+
+.team-item.tb-effect {
+    z-index: 1;
+    /* howa td-effect wara back ground ele mdeha lteam-item ele lonha #e8e8e8 f adeha z-index qema akbr mn  el 0 34an ttl3 fo2eha w tban*/
+    /*fe app development kant ltr-effect elbackground 4fafa f kant btege fo2eha 3latool lakn hna na mdeha loon f 34an kda mzaharet4 wbanet t7tha f bltale mbanet4 fe el4a4a*/
+}
+
+.team-item:hover .team-info-title {
+    color: #fff;
+}
+
+.team-item:hover .team-info-text {
+    color: var(--mainColor);
+}
+
+.team-info-text {
+    transition: color 0.1s;
+}
+
+/*Blog section*/
+
+.blog-content{
+    overflow: hidden;
+}
+.blog-item{
+    width: 30%;
+    float: left;
+    background-color: #fff;
+}
+.blog-item.mg{
+    margin: 0 5%;
+}
+.blog-item-img img{/*elsora kebera gdnn nazla bagmha eltabe3e*/
+    width: 100%;/*100% mn elparent bta3ha*/
+}
+.blog-info{
+    padding: 20px;
+}
+.blog-list{
+    list-style: none;
+    margin: 10px 0;
+}
+.blog-list li{
+    display: inline-block;
+    margin: 0 5px;
+}
+.blog-list li i{
+    color: var(--mainColor);
+}
+.blog-title{
+    font-weight: bold;
+    margin: 20px 0;
+}
+.blog-desc{
+    color: var(--grayColor);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.blog-link{
+    color: var(--mainColor);
+}
+
+
+/*Contact section*/
+
+/*footer section*/
+.footer{
+    background-color: #1c1d21;
+    text-align: center;
+    padding: 60px 0;
+}
+.footer-links{
+    list-style: none;
+    margin: 20px 0;
+}
+.footer-links li{
+    display: inline-block;
+}
+.footer-links li a{
+    display: block;/*el a tege fe elist kolaha bl3ard ta5od mkan ellist kolo*/
+    width: 50px;
+    height: 50px;
+    background-color: var(--mainColor);
+    color: #fff;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.footer-links li a i{
+    line-height: 50px;
+}
+.copyright{
+    color: var(--grayColor);
+    font-size: 15px;
+    text-transform: uppercase;
+}

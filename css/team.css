@@ -1,0 +1,109 @@
+
+/*Team section*/
+.team {}
+
+.team-content {
+    overflow: hidden;
+}
+
+.team-item {
+    width: 30%;
+    float: left;
+    background-color: #e8e8e8;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.team-item.mg {
+    margin: 0 5%;
+}
+
+.team-item .team-img {
+    width: 90%;
+    /*width bta3 div ele ayl elsora  elsora kebera f asa8ar elwidth bta3o*/
+    margin: auto;
+    /*34an yokon fe nos elparent bta3o*/
+    position: relative;
+    /*34an ageeb elicons foo2elsora*/
+}
+
+
+.team-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /*ka2ene ba2ol width 100% height100%*/
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    /*a2dar ados 3lehom f lazm visbility hidden*/
+    visibility: hidden;
+}
+
+.team-item .team-img img {
+    width: 100%;
+}
+
+.team-overlay a {
+    display: block;
+    /*yokono t7t b3d*/
+    width: 40px;
+    height: 40px;
+    background-color: var(--mainColor);
+    color: #fff;
+    margin-left: auto;
+    /*(yozo2 nafso mn el4mal w yewadeh yemen)*/
+}
+
+.team-overlay a i {
+    line-height: 40px;
+    /*34an awastanha (nafs 7agz elgheight bta3 elparent bta3h af tokon fe lnos*/
+}
+
+.team-item .team-img img {
+    width: 100%;
+    /*100% mn elparent ele wa5d 90% (34an elsora tenla 7ayez elparent)*/
+    margin: auto;
+    /*34an yokon fe nos elparent bta3o*/
+
+}
+
+.team-item .team-info-title {
+    color: #222;
+    margin: 10px 0;
+    transition: color 0.5s;
+
+}
+
+.team-item .team-info-text {
+    color: var(--grayColor);
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.5s;
+
+}
+
+.team-item:hover .team-overlay {
+    /*lma a3ml 3lek hover hatle team-overlay w 5ale eltale */
+    visibility: visible;
+    opacity: 1;
+}
+
+.team-item.tb-effect {
+    z-index: 1;
+    /* howa td-effect wara back ground ele mdeha lteam-item ele lonha #e8e8e8 f adeha z-index qema akbr mn  el 0 34an ttl3 fo2eha w tban*/
+    /*fe app development kant ltr-effect elbackground 4fafa f kant btege fo2eha 3latool lakn hna na mdeha loon f 34an kda mzaharet4 wbanet t7tha f bltale mbanet4 fe el4a4a*/
+}
+
+.team-item:hover .team-info-title {
+    color: #fff;
+}
+
+.team-item:hover .team-info-text {
+    color: var(--mainColor);
+}
+
+.team-info-text {
+    transition: color 0.1s;
+}

@@ -1,0 +1,43 @@
+
+/*Blog section*/
+
+.blog-content{
+    overflow: hidden;
+}
+.blog-item{
+    width: 30%;
+    float: left;
+    background-color: #fff;
+}
+.blog-item.mg{
+    margin: 0 5%;
+}
+.blog-item-img img{/*elsora kebera gdnn nazla bagmha eltabe3e*/
+    width: 100%;/*100% mn elparent bta3ha*/
+}
+.blog-info{
+    padding: 20px;
+}
+.blog-list{
+    list-style: none;
+    margin: 10px 0;
+}
+.blog-list li{
+    display: inline-block;
+    margin: 0 5px;
+}
+.blog-list li i{
+    color: var(--mainColor);
+}
+.blog-title{
+    font-weight: bold;
+    margin: 20px 0;
+}
+.blog-desc{
+    color: var(--grayColor);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.blog-link{
+    color: var(--mainColor);
+}

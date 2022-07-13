@@ -1,0 +1,56 @@
+
+/*Home section*/
+.home {
+    height: 100vh;
+    background-image: url(../images/background/background1.webp);
+    background-size: cover;
+    position: relative;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 65%;
+    /*34an elakalam yb2a wa5d ra7to*/
+}
+
+.home .title {
+    color: #fff;
+    font-size: 3.5rem;
+    /*rem=>root element/font size of html(16)*/
+    text-transform: uppercase;
+}
+
+.home .home-desc {
+    margin: 20px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.home .btn {
+    min-width: 160px;
+    padding: 10px;
+    /*lltext ele gowa msh elcontainer*/
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    /*lma a4awer blmouse ela elpointer 4aklo yt8ayar*/
+    font-size: 18px;
+}
+
+.home .btn-start {
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.home .btn-learn {
+    background-color: var(--mainColor);
+    color: #fff;
+}
+.btn:hover{
+    opacity: 0.7;
+}

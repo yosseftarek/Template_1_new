@@ -1,0 +1,70 @@
+/*2-General css style(el7agat ele mo4taraka)*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{/*=html*/
+    --mainColor:#6195ff;
+    --grayColor:#999;
+    --whiteColor:#fff;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.clear {
+    clear: both;
+    /*mo4kelet float el7al elawel*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: montserrat, sans-serif;
+    /*lw ma4ta8l4 a3ml include mn maktabet google font*/
+}
+
+button {
+    font-family: 'Varela Round', sans-serif;
+    /*aw ne3mlha font-family:inhirit y3ni fontfamily bta3t elmwke3*/
+}
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.pd-y {
+    padding: 120px 0px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header .section-title {
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+.section-header .line {
+    /*line 3obara 3n height w width*/
+    display: block;
+    height: 5px;
+    width: 60px;
+    margin: 0 auto 70px auto;
+    /*awastan ay 3onsor wa5d width*/
+    background-color: var(--mainColor);/*bygebo mn elroot*/
+}

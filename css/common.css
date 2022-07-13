@@ -1,0 +1,73 @@
+/*1-common*/
+/*
+      - overlay
+      - opacity hover
+      - section header(welcome to  website )
+      - section padding
+      - hover effect 1(left to right)
+      - hover effect 2(yop to bottom)
+      - elmawke3 kolo gowa container
+    */
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    
+    }
+    
+    .hover-opacity {
+        transition: 0.5s;
+        /*opacity tt3ml f wa2t b3mlha llparent*/
+    
+    }
+    
+    .hover-opacity:hover {
+        opacity: 0.8;
+    }
+    
+    .ltr-effect,
+    .tb-effect {
+        position: relative;
+    }
+    
+    .ltr-effect:after,
+    .tb-effect:after {
+        position: absolute;
+        content: "";
+        /*height: 100%; m3nah 100%mn msa7t el ab*/
+        top: 0;
+        left: 0;
+        /*top0 bott 0 ka2eno ma4dod by3ml 3amal height 100%*/
+        right: 0;
+        bottom: 0;
+        background-color: #333;
+        z-index: -1;
+        /*yb2a wara elkalam*/
+    }
+    
+    .ltr-effect:after {
+        /*el7aga elmo5talefa 3n tp.effect:after=>width , transition width*/
+        /*lma a3ml hover hat elafter*/
+        width: 0;
+        transition: width 0.5s;
+        /*5ale elwidth yt7rk bra7a f nos sanya*/
+    }
+    
+    .tb-effect:after {
+        /*el7aga elmo5talefa 3n ltr.effect:after=>height , transition height*/
+        height: 0;
+        transition: height 0.5s;
+    }
+    
+    .ltr-effect:hover:after {
+        /*lma a3ml hover hat elafter*/
+        width: 100%;
+    }
+    
+    .tb-effect:hover:after {
+        /*lma a3ml hover hat elafter*/
+        height: 100%;
+    }

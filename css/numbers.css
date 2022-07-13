@@ -1,0 +1,40 @@
+
+/*section numbers*/
+.numbers {
+    /*leh width bs malo4 height 34an ebno wa5d absolute(o5rog barra elsaf7a) fhowa yo3tabar msh mn demn elab bta3o flazm ade height*/
+    position: relative;
+    background-image: url(../images/background/background2.webp);
+    background-size: cover;
+    /*34an temla el7ayez ele mawgoda feh*/
+    background-attachment: fixed;
+    /*34an elsora tb2a sabta wana b3ml scroll 34an tt7rk kda wana b3ml scroll*/
+    height: 300px;
+}
+
+.numbers-items {
+    overflow: hidden;
+    padding: 100px 0;
+    /*34an yege felnos vertically*/
+}
+
+.number-item {
+    width: 25%;
+    /*34an homma 4 ganb b3d*/
+    float: left;
+    text-align: center;
+}
+
+.number-item .icon {
+    color: var(--mainColor);
+    margin-bottom: 15px;
+}
+
+.number-item-title {
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}
+
+.number-item-desc {
+    color: #fff;
+}

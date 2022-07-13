@@ -1,0 +1,75 @@
+
+/*Prices section*/
+.pricing {}
+
+.pricing-plans {
+    overflow: hidden;
+}
+
+.pricing-item {
+    width: 30%;
+    float: left;
+    padding: 40px 15px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+.pricing-item.mg {
+    margin: 0 5%;
+}
+
+.pricing-item-text {
+    text-transform: uppercase;
+    font-size: 17px;
+    color: var(--grayColor);
+    transition: color 0.5s;
+}
+
+.pricing-item-permonth {
+    width: 130px;
+    height: 130px;
+    /*34an elkora tb2a malfofa 7elw*/
+    padding: 20px 0;
+    margin: 20px auto;
+    border: 2px solid var(--mainColor);
+    border-radius: 50%;
+    transition: color 0.5s;
+}
+
+.pricing-item-permonth .doller {
+    font-size: 50px;
+}
+
+.pricing-item-permonth .month {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.pricing-list {
+    list-style: none;
+}
+
+.pricing-list li {
+    color: var(--grayColor);
+    line-height: 1.8;
+}
+
+.pricing-item-purchase {
+    background: none;
+    border: 2px solid var(--mainColor);
+    display: block;
+    width: 140px;
+    padding: 10px;
+    margin: 15px auto 0 auto;
+    color: var(--mainColor);
+
+}
+
+.pricing-item:hover .pricing-item-permonth {
+    color: #fff;
+}
+
+.pricing-item:hover .pricing-item-text {
+    color: var(--mainColor);
+}

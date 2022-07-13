@@ -1,0 +1,115 @@
+/*3-sections styles*/
+/*3.0-Header section*/
+.header {
+    position: fixed;
+    /*hyb2a nav ta7t content (background image)*/
+    width: 100%;
+    /*34an ya5od kol el4a4a bltol 34an howa b2a inline-block*/
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+    /*nav foo2 image*/
+}
+
+/*.header-content {
+    overflow: hidden;
+    mo4kelet float el7al eltani
+    msta5demnaha4 34an hya fe elheader w mtenf34 m3 dropdown msh htzhar
+    
+    b3d ma 3mlna position relative w position absolute msh zahra bardo 34an hidden 34an kda 4elnaha 
+}*/
+
+.header .logo {
+    /*elmakan ele wa5d elsora*/
+    width: 40%;
+    /*background: red; k aterbha 34an abyaenha lnafse fe elawel*/
+    float: left;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 15px;
+}
+
+.header .nav {
+    width: 60%;
+    /*background: green; k aterbha 34an abyaenha lnafse fe elawel*/
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav>li {
+    /*hat li welad elnav bs*/
+    display: inline-block;
+    text-align: right;
+    /*padding: 20px;kda ana bawasa3 msa7et el list msh el a msh htb2a clickable*/
+}
+
+.header .nav>li>a {
+    /*hat el a ele howa ebn li ebn nav
+    34an msh 3ayz l blog post tban el4arta elzar2a ele ta7taha dh
+    el a bta3t blog post dh ebn el ul*/
+    color: white;
+    display: block;
+    padding: 30px 15px;
+    font-size: 15px;
+}
+
+.header .nav>li>a.active:after,
+/*after before 3anaser inline*/
+.header .nav>li>a:after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: var(--mainColor);
+    transition: width 0.5s;
+}
+
+.header .nav>li>a.active:after {
+    /*awel a htb2a wad7a*/
+    width: 100%;
+}
+
+.header .nav>li>a:after {
+    /*ay a tanya htb2a 0*/
+    width: 0;
+}
+
+.header .nav>li>a:hover:after {
+    width: 100%;
+}
+
+.header .nav>li>a:hover:after {
+    /*lma a3ml hover 3la a htale elafter*/
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: var(--mainColor);
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visiblity 0.5s;
+    /*aw aktb opacity bs */
+}
+
+.dropdown-menu a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    /*lma a4awer eldropdown hat dropdown menu*/
+    opacity: 1;
+    visibility: visible;
+}
